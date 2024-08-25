@@ -1,0 +1,219 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 350px;
+    /* Increased width to accommodate longer text */
+    background-color: white;
+    border: 2px solid #ff0078;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #ff0078;
+    margin-bottom: 20px;
+}
+
+.offer-box {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 10px 10px 10px 70px;
+    /* Adjust padding to leave space for the discount tag */
+    cursor: pointer;
+    position: relative;
+    /* Set relative positioning for the box */
+    overflow: hidden;
+    /* Prevent content overflow when expanded */
+}
+
+.offer-header {
+    display: flex;
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    white-space: nowrap;
+    /* Ensure the header content stays on one line */
+}
+
+.discount-tag {
+    background-color: #ff0078;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    height: 100%;
+    /* width: 50px; */
+    max-width: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: height 0.3s ease;
+    line-height: 1;
+    white-space: normal;
+}
+
+.discount-tag-right {
+    background-color: #ff0078;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    display: none;
+}
+
+.most-popular {
+    /* background-color: #ffe5e5; */
+    color: #ff0078;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.offer-details {
+    display: none;
+    /* Initially hidden */
+    margin-top: 10px;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+label {
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+select {
+    padding: 5px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+}
+
+.summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    font-size: small;
+}
+
+.add-to-cart {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff0078;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-to-cart:hover {
+    background-color: #e6006f;
+}
+
+footer {
+    text-align: center;
+    color: #e0e0e0;
+    margin-top: 10px;
+}
+
+.pumper {
+    color: #ff0078;
+    font-weight: bold;
+}
+
+.offer-box.active {
+    background-color: #ffe5e5;
+    /* Light pink background */
+    border-color: #ff0078;
+    /* Ensure the border color matches the design */
+}
+
+.offer-box.active .offer-details {
+    display: block;
+    /* Show the details when the box is active */
+}
+
+.offer-box.active .discount-tag {
+    height: 40px;
+    display: none;
+}
+
+.offer-box.active .discount-tag-right {
+    display: inline-flex
+}
+
+.offer-box.active
+
+.offer-title {
+    flex-grow: 1;
+    /* Allow the title to take up more space */
+    margin-left: 10px;
+    margin-right: 10px;
+    white-space: nowrap;
+    /* Ensure the text stays on a single line */
+}
+
+.offer-price {
+    white-space: nowrap;
+    font-weight: bold;
+    /* Ensure the text stays on a single line */
+}
+
+/* Custom Radio Button */
+.discount-button {
+    display: none;
+}
+
+.discount-button+label {
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+}
+
+.discount-button+label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid #ff0078;
+    /* Pink color border */
+    background-color: white;
+}
+
+.discount-button:checked+label::before {
+    background-color: white;
+    /* Pink background color when selected */
+    border-color: #ff0078;
+    /* Ensure border color stays pink */
+}
+
+.discount-button:checked+label::after {
+    content: '';
+    position: absolute;
+    left: 3.5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #ff0078;
+    /* White dot inside when selected */
+}
